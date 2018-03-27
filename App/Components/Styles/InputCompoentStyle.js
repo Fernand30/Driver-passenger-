@@ -8,16 +8,23 @@ export default StyleSheet.create({
     inputStyle:{
         fontFamily:Fonts.type.base,
         letterSpacing:1,
+        fontSize : Fonts.size.medium
+    },
+    inputStyle1:{
+        fontFamily:Fonts.type.base,
+        letterSpacing:1,
+        fontSize : Fonts.size.medium,
+        marginLeft:-5
     },
     labelStyle:{
         fontFamily:Fonts.type.base,
+        fontSize: Fonts.size.small
     },
     Icon:{
         flexDirection:'row',
-        flexWrap:'wrap'
+        alignItems:'center'
     },
     IconSubCont:{
-        marginTop:15,
         paddingRight : 8
     }
 })

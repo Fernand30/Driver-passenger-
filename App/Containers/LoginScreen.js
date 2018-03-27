@@ -44,6 +44,7 @@ class LoginScreen extends Component {
             secureTextEntry={false}
             onChangeText={(text) => this.setState({ email: text })}
           />
+          <View style={{height:20}}/>
           <InputCompoent
             labelText='Password'
             icon ="unlock-alt"
@@ -67,7 +68,8 @@ class LoginScreen extends Component {
           }}
           textStyle={{
             color: Colors.skyblue,
-            fontSize: 14
+            fontSize: 12,
+            textDecorationLine: 'underline'
           }}
           onPress={() => {
             // this.setState({ modalVisible: true })
@@ -84,7 +86,7 @@ class LoginScreen extends Component {
     return (
       <View style={styles.buttonContainer}>
         <FullButton
-          text='login'
+          text='Log In'
           style={{
             backgroundColor: Colors.skyblue,
             bottom: 10,
@@ -93,28 +95,29 @@ class LoginScreen extends Component {
             height: Metrics.baseMargin * 5,
           }}
           textStyle={{
-            color: '#f0f0f0',
+            color: '#fff',
+            fontSize: 14,
+            fontWeight:'700'
           }}
           onPress={() => {this.props.navigation.navigate('mainStack')}}
         />
         <View
           style={styles.hr}
         />
-        <FullButton
-          text='login via facebook'
-          style={{
-            backgroundColor: Colors.facebook,
-            bottom: Metrics.baseMargin,
-            alignItems: 'center',
-            borderRadius: 5,
-            marginTop: 40,
-            height: Metrics.baseMargin * 5,
-          }}
-          textStyle={{
-            color: '#f0f0f0',
-          }}
-          onPress={this.handleLogin}
-        />
+        <TouchableOpacity style={{
+              backgroundColor: Colors.facebook,
+              bottom: Metrics.baseMargin,
+              alignItems: 'center',
+              justifyContent:'center',
+              borderRadius: 5,
+              marginTop: 40,
+              height: Metrics.baseMargin * 5,
+            }}>
+            <View style={{flexDirection:'row', alignItems:'center'}}>
+              <Text style={{color: '#fff', fontSize:20, fontWeight:'900', marginRight:10}}>f</Text>
+              <Text style={{color: '#fff', fontSize:14, fontWeight:'700'}}>Login via Facebook</Text>
+            </View>
+        </TouchableOpacity>
       </View>
     )
   }

@@ -21,25 +21,24 @@ export default class InputCompoent extends Component {
 
   render() {
     return (
-      <Item stackedLabel>
+      <Item stackedLabel style={{height:65}}>
         <Label style={styles.labelStyle}>{this.props.labelText}</Label>
         <View style={styles.Icon}>
-          <View style={styles.IconSubCont}>
-          <Icon name = {this.props.icon} size={18} color="#c6c6c6"/>
-          </View>
-        <Input
-
-          placeholder={this.props.placeholder}
-          style={styles.inputStyle}
-          ref={this.props.inputRef}
-          autoFocus={false}
-          value={this.props.value}
-          placeholderTextColor={Colors.gray}
-          autoCapitalize='none'
-          autoCorrect={false}
-          secureTextEntry={this.props.secureTextEntry}
-          onChangeText={this.props.onChangeText}
-        />
+          {(this.props.icon)?<View style={styles.IconSubCont}>
+                      <Icon name = {this.props.icon} size={16} color="#c6c6c6"/>
+                    </View>:null}
+          <Input
+            placeholder={this.props.placeholder}
+            style={(this.props.icon)?styles.inputStyle:styles.inputStyle1}
+            ref={this.props.inputRef}
+            autoFocus={false}
+            value={this.props.value}
+            placeholderTextColor={Colors.gray}
+            autoCapitalize='none'
+            autoCorrect={false}
+            secureTextEntry={this.props.secureTextEntry}
+            onChangeText={this.props.onChangeText}
+          />
         </View>
 
       </Item>

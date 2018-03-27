@@ -29,62 +29,61 @@ class RegisterScreen extends Component {
 
   renderForm() {
     return (
-      <View style={styles.formContainer}>
-        <View style={styles.profilePicContent}>
-          <View style={styles.profilePicView}>
-            <Image
-              source={Images.userDefault}
-              style={styles.profilePic}
-            />
+      <View style={styles.mainview}>
+       
+          <View style={{flexDirection:'row', alignItems:'center', justifyContent:'space-between'}}>
+            <View style={{flex:0.45}}>
+              <InputCompoent
+                labelText='First Name'
+                placeholder='Enter First Name'
+                inputRef='firstName'
+                value={this.state.firstName}
+                secureTextEntry={false}
+                onChangeText={(text) => this.setState({ firstName: text })}
+              />
+            </View>
+            <View style={{flex:0.45}}>
+              <InputCompoent
+                labelText='Last Name'
+                placeholder='Enter last name'
+                inputRef='lastName'
+                secureTextEntry={false}
+                value={this.state.lastName}
+                onChangeText={(text) => this.setState({ lastName: text })}
+              />
+            </View>
           </View>
-        </View>
-        <Form>
-          <InputCompoent
-            labelText='First Name'
-            icon ="user"
-            placeholder='Enter First Name'
-            inputRef='firstName'
-            value={this.state.firstName}
-            secureTextEntry={false}
-            onChangeText={(text) => this.setState({ firstName: text })}
-          />
-          <InputCompoent
-            labelText='Last Name'
-            icon ="user"
-            placeholder='Enter last name'
-            inputRef='lastName'
-            secureTextEntry={false}
-            value={this.state.lastName}
-            onChangeText={(text) => this.setState({ lastName: text })}
-          />
+          <View style={{height:20}}/>
           <InputCompoent
             labelText='Email Address'
-            icon = "envelope-o"
+            icon = ""
             placeholder='Enter Email Address'
             inputRef='email'
             value={this.state.email}
             secureTextEntry={false}
             onChangeText={(text) => this.setState({ email: text })}
           />
+          <View style={{height:20}}/>
           <InputCompoent
             labelText='Password'
-            icon = "envelope-o"
+            icon = ""
             placeholder='Enter password'
             inputRef='password'
             secureTextEntry={true}
             value={this.state.password}
             onChangeText={(text) => this.setState({ password: text })}
           />
+          <View style={{height:20}}/>
           <InputCompoent
             labelText='Confirm Password'
-            icon = "unlock-alt"
+            icon = ""
             placeholder='Re-enter your password'
             inputRef='rePassword'
             secureTextEntry={false}
             value={this.state.rePassword}
             onChangeText={(text) => this.setState({ rePassword: text })}
           />
-        </Form>
+       
       </View>
     )
   }
@@ -115,17 +114,13 @@ class RegisterScreen extends Component {
 
   render() {
     return (
-      <Container>
-        <Content>
+     
+        
           <View style={styles.contentStyle}>
 
             {this.renderForm()}
-            {this.renderButton()}
           </View>
 
-        </Content>
-
-      </Container>
     )
   }
 }

@@ -5,7 +5,7 @@ export default StyleSheet.create({
   ...ApplicationStyles.screen,
   contentStyle: {
     flex: 1,
-    padding: Metrics.baseMargin*2
+    padding: Metrics.baseMargin*2,
   },
   buttonContainer:{
     marginTop:Metrics.baseMargin*3,
@@ -23,6 +23,11 @@ export default StyleSheet.create({
   profilePic:{
     height:100,
     width:100,
+  },
+  mainview:{
+    backgroundColor: Colors.snow,
+    padding: Metrics.doubleBaseMargin,
+    flex:1,
   }
   
 })
