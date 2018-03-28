@@ -5,8 +5,7 @@ const {height, width} = Dimensions.get("window");
 export default StyleSheet.create({
     container: {
         ...StyleSheet.absoluteFillObject,
-    height: 520,
-    width: 400,
+    flex:1,
     justifyContent: 'flex-end',
     alignItems: 'center',
     },
@@ -14,16 +13,31 @@ export default StyleSheet.create({
         ...StyleSheet.absoluteFillObject
     },
     footerForRequest: {
-        flex: 0.3,
-        opacity: 0.6,
-        backgroundColor: 'black'
+        flex: 0.23,
+        opacity: 0.8,
+        backgroundColor: 'black',
     },
     footerForRequestMain: {
-        width: '100%'
+        flex:1,
+        justifyContent:'center'
     },
     footerForRequestView: {
-        flex: 0.9,
-        flexDirection: 'row'
+        flex: 0.4,  
+        flexDirection: 'row',
+        alignItems:'center',
+        justifyContent:'space-between',
+        paddingHorizontal: width/25
+    },
+    rightView:{
+        alignItems:'center',
+    },
+    switch:{
+        marginTop: 10,
+        transform: [{ scaleX: .8 }, { scaleY: .8 }]
+    },
+    menu:{
+        width: width / 18,
+        height: width / 18 /766*577
     },
     footerForRequestProfileImageMainView:{
         height:height,
@@ -38,9 +52,9 @@ export default StyleSheet.create({
         borderRadius:100
     },
     footerForRequestImage:{
-        width:width*0.26,
-        height:width*0.26,
-        borderRadius:100
+        width:width*0.2,
+        height:width*0.2,
+        borderRadius:width*0.1,
     },
     footerForRequestContentView:{
         width:width*0.8,
@@ -78,18 +92,18 @@ export default StyleSheet.create({
         justifyContent:'space-between',
     },
     footerForRequestEmailView:{
-        height:height,
-        paddingLeft:4,
+       
     },
     footerForRequestEmail:{
-        fontSize:16, color:'white'
+        fontSize:16, color:'white',
+        marginTop :10
     },
     footerForRequestSwitch:{
         height:height,
         paddingRight:5
     },
     headerOfBookRide: {
-        paddingLeft: 50
+        paddingLeft: width / 25
     },
 })
 

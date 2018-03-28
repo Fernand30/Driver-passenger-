@@ -44,30 +44,14 @@ class BookRideScreen extends Component {
             <Footer style={styles.footerForRequest}>
                 <View style={styles.footerForRequestMain}>
                     <View style={styles.footerForRequestView}>
-                        <View style={styles.footerForRequestProfileImageMainView}>
-                            <View style={styles.footerForRequestProfileImageView}>
-                                <Image source={require('./../../assets/images/profile.jpg')} style={styles.footerForRequestImage}/>
-                            </View>
+                        <Image source={require('./../../assets/images/profile.jpg')} style={styles.footerForRequestImage}/>
+                        <View>
+                            <Text style={styles.footerForRequestName}>John Karter</Text>
+                            <Text style={styles.footerForRequestEmail}>johnkarter@gmail.com</Text>
                         </View>
-                        <View style={styles.footerForRequestContentView}>
-                            <View style={styles.footerForRequestContentView1}>
-                                <View style={styles.footerForRequestNameView}>
-                                    <Text style={styles.footerForRequestName}>John Karter</Text>
-                                </View>
-                                <View style={styles.footerForRequestGoOfflineView}>
-                                    <Text style={styles.footerForRequestGoOffline}>GO OFFLINE</Text>
-                                </View>
-                            </View>
-                            <View style={styles.footerForRequestContentView2}>
-                                <View style={styles.footerForRequestEmailView}>
-                                    <Text style={styles.footerForRequestEmail}>johnkarter@gmail.com</Text>
-                                </View>
-                                <View style={styles.footerForRequestSwitch}>
-                                    <View>
-                                        <Switch tintColor='green' />
-                                    </View>
-                                </View>
-                            </View>
+                        <View style={styles.rightView}>
+                            <Text style={styles.footerForRequestGoOffline}>GO OFFLINE</Text>
+                            <Switch tintColor='green' style={styles.switch}/>
                         </View>
                     </View>
                 </View>
@@ -90,15 +74,15 @@ class BookRideScreen extends Component {
 }
 
 BookRideScreen.navigationOptions = ({ navigation }) => ({
-    title: "Home",
-
+    title: <Text style={{fontSize:18}}>Home</Text>,
+    navBarBackgroundColor: '#fff',
     headerLeft: (
         <TouchableOpacity
             onPress={() => navigation.navigate("DrawerOpen")}
             activeOpacity={0.5}
             style={styles.headerOfBookRide}
             >
-            <Icon name="bars" size={20} />
+            <Image source={require('./../../assets/images/menu.png')} style={styles.menu}/>
 
         </TouchableOpacity>
     ),

@@ -7,7 +7,7 @@ export default StyleSheet.create({
     padding: 20
   },
   header: {
-      fontSize: 12,
+      fontSize: 11,
       fontWeight: 'bold'
   },
   leftHeader: {
@@ -17,12 +17,15 @@ export default StyleSheet.create({
       color: 'black'
   },
   item: {
-      flex: 1,
-      flexDirection: 'column'
+      marginLeft: 20
   },
   subItem: {
       flex: 1,
-      flexDirection: 'row'
+      flexDirection: 'row',
+      alignItems: 'center',
+      backgroundColor: 'white',
+      paddingLeft: 30,
+      paddingVertical: 20
   },
   partition1: {
       width: '25%',
@@ -31,22 +34,33 @@ export default StyleSheet.create({
       justifyContent: 'center',
       alignItems: 'center'
   },
+  mark:{
+    width: width / 30,
+    height: width /30 / 27*162
+  },
+  canceled:{
+    width: width / 10,
+    height: width /10 / 95*81,
+    marginTop : -10
+  },
+  menu:{
+        width: width / 18,
+        height: width / 18 /766*577
+    },
   partition2: {
       width: '75%',
       height: 160,
       backgroundColor: 'white'
   },
   childItem: {
-      width: '100%',
-      height: 30
+      marginTop: 25
   },
   childStyle1: {
-      paddingTop: 15,
       fontSize: 12,
       color: Colors.steel
   },
   childStyle2: {
-      fontSize: 16,
+      fontSize: 15,
       color: "black"
   }
 

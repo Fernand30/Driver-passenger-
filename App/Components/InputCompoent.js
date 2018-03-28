@@ -38,6 +38,7 @@ export default class InputCompoent extends Component {
             autoCorrect={false}
             secureTextEntry={this.props.secureTextEntry}
             onChangeText={this.props.onChangeText}
+            placeholderTextColor='black'
           />
         </View>
 

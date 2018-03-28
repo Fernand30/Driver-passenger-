@@ -8,10 +8,12 @@ export default StyleSheet.create({
     },
     backgroundImg: {
         width: 250,
-        height: height * 0.3
+        height: height * 0.23
     },
     avatarContainer: {
-        position: 'absolute'
+        position: 'absolute',
+        paddingTop: 30,
+        paddingLeft:20
     },
     img : {
         width:width * 0.2,
@@ -21,13 +23,11 @@ export default StyleSheet.create({
         marginLeft:width * 0.08
     },
     imgText : {
-        fontSize:15,
+        fontSize:16,
         color:'#fff',
-        marginLeft:width * 0.06,
-        marginTop:width * 0.02
     },
     innerImg : {
-        borderRadius: 100,
+        borderRadius: width * 0.1,
         width:width * 0.2,
         height:width * 0.2
     },
@@ -37,11 +37,31 @@ export default StyleSheet.create({
         justifyContent: 'space-between'
     },
     subContainer: {
-        marginTop: 30,
-        marginLeft: 20
+        marginTop: 20,
+        marginLeft: 15
     },
     flex1: {
         flex: 1
+    },
+    home:{
+        width: width /20,
+        height: width / 20
+    },
+    wallet:{
+        width: width /20,
+        height: width / 20/58*57
+    },
+    car:{
+        width: width /20,
+        height: width / 20/57*28
+    },
+    menuView:{
+        flexDirection: 'row',
+        alignItems:'center'
+    },
+    fixView:{
+        alignItems:'center',
+        width: width / 15
     },
     footer: {
         height: 50,
@@ -54,15 +74,17 @@ export default StyleSheet.create({
         marginLeft: 2
     },
     text: {
-        marginLeft: 40,
-        fontSize: 15
+        marginLeft: 15,
+        fontSize: 14
     },
     SwitchView:{
         flexDirection:'row',
-        flexWrap:'wrap'
+        marginTop:width * 0.02,
+        alignItems:'center'
     },
     SwitchButton:{
-        padding:5
+        marginLeft: 15,
+        transform: [{ scaleX: .8 }, { scaleY: .8 }]
     }
 
 })

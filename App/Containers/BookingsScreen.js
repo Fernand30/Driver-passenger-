@@ -10,136 +10,107 @@ class BookingsScreen extends Component {
 
     headerLeftContent(){
         return(
-            <Text style={[styles.header, styles.leftHeader]}>JANUARY</Text>
+            <Text style={[styles.header, styles.leftHeader]}>FEBRUARY 15 - 4:50 PM</Text>
         )
     }
 
     headerRightContent(){
         return(
-            <Text style={[styles.header, styles.rightHeader]}>PENDING</Text>
+            <View style={{flexDirection:'row',alignItems:'center'}}>
+                <View style={{marginRight: 5,width: 8, height: 8, backgroundColor:'green'}}/>
+                <Text style={[styles.header, styles.rightHeader]}>ACCEPTED</Text>
+            </View>
+        )
+    }
+
+    headerRightContentImage(){
+        return(
+            <View style={{flexDirection:'row',alignItems:'center'}}>
+                <Image source={require('./../../assets/images/canceled.png')} style={styles.canceled}/>
+            </View>
         )
     }
 
     render() {
         return (
             <Container>
-                <ScrollView>
-                    <View style={styles.item}>
+                <ScrollView showsVerticalScrollIndicator={false}>
+                    <View>
                         <ListHeader leftContent={this.headerLeftContent()} rightContent={this.headerRightContent()} />
                         <View style={styles.subItem}>
-                            <View style={styles.partition1}>
-                                <Icon name="map-marker" size={20} color="#75B1FA"/>
-                            </View>
-                            <View style={styles.partition2}>
-                                <View style={styles.item}>
-                                    <View style={styles.childItem}>
-                                        <Text style={styles.childStyle1}>Pickup Location</Text>
-                                    </View>
-                                    <View style={styles.childItem}>
-                                        <Text style={styles.childStyle2}>Historical Library & Museum</Text>
-                                    </View>
-                                    <View style={styles.childItem}>
-                                        <Text style={styles.childStyle1}>Destination Location</Text>
-                                    </View>
-                                    <View style={styles.childItem}>
-                                        <Text style={styles.childStyle2}>My Home</Text>
-                                    </View>
+                            <Image source={require('./../../assets/images/mark.png')} style={styles.mark}/>
+                            <View style={styles.item}>
+                                <View>
+                                    <Text style={styles.childStyle1}>Pickup Location</Text>
+                                    <Text style={styles.childStyle2}>Royal Light Cinema</Text>
+                                </View>
+                                <View style={styles.childItem}>
+                                    <Text style={styles.childStyle1}>Destination Location</Text>
+                                    <Text style={styles.childStyle2}>Historical Library & Museum</Text>
                                 </View>
                             </View>
                         </View>
                     </View>
-                    <View style={styles.item}>
+                    <View>
                         <ListHeader leftContent={this.headerLeftContent()} rightContent={this.headerRightContent()} />
                         <View style={styles.subItem}>
-                            <View style={styles.partition1}>
-                                <Icon name="map-marker" size={20} color="#75B1FA"/>
-                            </View>
-                            <View style={styles.partition2}>
-                                <View style={styles.item}>
-                                    <View style={styles.childItem}>
-                                        <Text style={styles.childStyle1}>Pickup Location</Text>
-                                    </View>
-                                    <View style={styles.childItem}>
-                                        <Text style={styles.childStyle2}>Historical Library & Museum</Text>
-                                    </View>
-                                    <View style={styles.childItem}>
-                                        <Text style={styles.childStyle1}>Destination Location</Text>
-                                    </View>
-                                    <View style={styles.childItem}>
-                                        <Text style={styles.childStyle2}>My Home</Text>
-                                    </View>
+                            <Image source={require('./../../assets/images/mark.png')} style={styles.mark}/>
+                            <View style={styles.item}>
+                                <View>
+                                    <Text style={styles.childStyle1}>Pickup Location</Text>
+                                    <Text style={styles.childStyle2}>Royal Light Cinema</Text>
+                                </View>
+                                <View style={styles.childItem}>
+                                    <Text style={styles.childStyle1}>Destination Location</Text>
+                                    <Text style={styles.childStyle2}>Historical Library & Museum</Text>
                                 </View>
                             </View>
                         </View>
                     </View>
-                    <View style={styles.item}>
-                        <ListHeader leftContent={this.headerLeftContent()} rightContent={this.headerRightContent()} />
+                    <View>
+                        <ListHeader leftContent={this.headerLeftContent()} rightContent={this.headerRightContentImage()} />
                         <View style={styles.subItem}>
-                            <View style={styles.partition1}>
-                                <Icon name="map-marker" size={20} color="#75B1FA"/>
-                            </View>
-                            <View style={styles.partition2}>
-                                <View style={styles.item}>
-                                    <View style={styles.childItem}>
-                                        <Text style={styles.childStyle1}>Pickup Location</Text>
-                                    </View>
-                                    <View style={styles.childItem}>
-                                        <Text style={styles.childStyle2}>Historical Library & Museum</Text>
-                                    </View>
-                                    <View style={styles.childItem}>
-                                        <Text style={styles.childStyle1}>Destination Location</Text>
-                                    </View>
-                                    <View style={styles.childItem}>
-                                        <Text style={styles.childStyle2}>My Home</Text>
-                                    </View>
+                            <Image source={require('./../../assets/images/mark.png')} style={styles.mark}/>
+                            <View style={styles.item}>
+                                <View>
+                                    <Text style={styles.childStyle1}>Pickup Location</Text>
+                                    <Text style={styles.childStyle2}>Royal Light Cinema</Text>
+                                </View>
+                                <View style={styles.childItem}>
+                                    <Text style={styles.childStyle1}>Destination Location</Text>
+                                    <Text style={styles.childStyle2}>Historical Library & Museum</Text>
                                 </View>
                             </View>
                         </View>
                     </View>
-                    <View style={styles.item}>
+                    <View>
                         <ListHeader leftContent={this.headerLeftContent()} rightContent={this.headerRightContent()} />
                         <View style={styles.subItem}>
-                            <View style={styles.partition1}>
-                                <Icon name="map-marker" size={20} color="#75B1FA"/>
-                            </View>
-                            <View style={styles.partition2}>
-                                <View style={styles.item}>
-                                    <View style={styles.childItem}>
-                                        <Text style={styles.childStyle1}>Pickup Location</Text>
-                                    </View>
-                                    <View style={styles.childItem}>
-                                        <Text style={styles.childStyle2}>Historical Library & Museum</Text>
-                                    </View>
-                                    <View style={styles.childItem}>
-                                        <Text style={styles.childStyle1}>Destination Location</Text>
-                                    </View>
-                                    <View style={styles.childItem}>
-                                        <Text style={styles.childStyle2}>My Home</Text>
-                                    </View>
+                            <Image source={require('./../../assets/images/mark.png')} style={styles.mark}/>
+                            <View style={styles.item}>
+                                <View>
+                                    <Text style={styles.childStyle1}>Pickup Location</Text>
+                                    <Text style={styles.childStyle2}>Royal Light Cinema</Text>
+                                </View>
+                                <View style={styles.childItem}>
+                                    <Text style={styles.childStyle1}>Destination Location</Text>
+                                    <Text style={styles.childStyle2}>Historical Library & Museum</Text>
                                 </View>
                             </View>
                         </View>
                     </View>
-                    <View style={styles.item}>
+                    <View>
                         <ListHeader leftContent={this.headerLeftContent()} rightContent={this.headerRightContent()} />
                         <View style={styles.subItem}>
-                            <View style={styles.partition1}>
-                                <Icon name="map-marker" size={20} color="#75B1FA"/>
-                            </View>
-                            <View style={styles.partition2}>
-                                <View style={styles.item}>
-                                    <View style={styles.childItem}>
-                                        <Text style={styles.childStyle1}>Pickup Location</Text>
-                                    </View>
-                                    <View style={styles.childItem}>
-                                        <Text style={styles.childStyle2}>Historical Library & Museum</Text>
-                                    </View>
-                                    <View style={styles.childItem}>
-                                        <Text style={styles.childStyle1}>Destination Location</Text>
-                                    </View>
-                                    <View style={styles.childItem}>
-                                        <Text style={styles.childStyle2}>My Home</Text>
-                                    </View>
+                            <Image source={require('./../../assets/images/mark.png')} style={styles.mark}/>
+                            <View style={styles.item}>
+                                <View>
+                                    <Text style={styles.childStyle1}>Pickup Location</Text>
+                                    <Text style={styles.childStyle2}>Royal Light Cinema</Text>
+                                </View>
+                                <View style={styles.childItem}>
+                                    <Text style={styles.childStyle1}>Destination Location</Text>
+                                    <Text style={styles.childStyle2}>Historical Library & Museum</Text>
                                 </View>
                             </View>
                         </View>
@@ -150,7 +121,8 @@ class BookingsScreen extends Component {
     }
 }
 BookingsScreen.navigationOptions = ({ navigation }) => ({
-    title: "My Bookings",
+    title: <Text style={{fontSize:18}}>My Trips</Text>,
+    navBarBackgroundColor: '#fff',
 
     headerLeft: (
         <TouchableOpacity
@@ -158,7 +130,7 @@ BookingsScreen.navigationOptions = ({ navigation }) => ({
           activeOpacity={0.5}
           style={styles.bookingPageHeader}
         >
-            <Icon name="bars" size={20} />
+            <Image source={require('./../../assets/images/menu.png')} style={styles.menu}/>
 
         </TouchableOpacity>
     ),

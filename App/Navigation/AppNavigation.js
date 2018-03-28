@@ -15,6 +15,7 @@ import LoginScreen from '../Containers/LoginScreen';
 import ProfileScreen from '../Containers/ProfileScreen';
 import BookingsScreen from '../Containers/BookingsScreen';
 import RateCardScreen from '../Containers/ManageCar';
+import WalletScreen from '../Containers/WalletScreen';
 import BookRideScreen from '../Containers/BookRideScreen';
 import { Colors, Fonts } from '../Themes';
 import DrawerDisplay from './DrawerDisplay'
@@ -70,6 +71,9 @@ const LoginStack = StackNavigator({
 const RateCardStack = StackNavigator({
     RateCardScreen : { screen : RateCardScreen},
 });
+const WalletStack = StackNavigator({
+    WalletScreen : { screen : WalletScreen},
+});
 const ProfileStack = StackNavigator({
     ProfileScreen : { screen : ProfileScreen }
 });
@@ -87,7 +91,7 @@ const DrawerNav = DrawerNavigator({
     ProfileStack : { screen : ProfileStack },
     RateCardStack : {screen : RateCardStack},
     BookingStack : { screen : BookingStack },
-
+    WalletStack : { screen : WalletStack },
     }, {
       contentComponent: DrawerDisplay,
       drawerWidth: 250

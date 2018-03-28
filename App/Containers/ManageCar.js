@@ -4,9 +4,19 @@ import { Container, Content, Footer, Label } from 'native-base';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import ListHeader from '../Components/ListHeader';
 import styles from './Styles/ManageCarStyle';
+import { Dropdown } from 'react-native-material-dropdown';
 import { connect } from 'react-redux';
 const {height, width} = Dimensions.get("window");
 import InputCompoent from './../Components/InputCompoent'
+const data = [{
+      value: 'Vehicle no.',
+    }, {
+      value: 'Vehicle type',
+    }, {
+      value: 'Lincense no.',
+    },{
+      value: 'Lincense expire date',
+    }];
 
 class RateCardScreen extends Component {
 
@@ -30,13 +40,10 @@ class RateCardScreen extends Component {
     render() {
         return (
             <Container>
-                <View style={styles.imageView}>
-                    <Image source = {require('./../../assets/images/download.png')} style={styles.image} />
-                </View>
-                <View style={styles.addressView}>
-                    <View style={styles.addressView1}>
-                        <Text style={styles.address}>GJ 3 AP 6855</Text>
-                    </View>
+                
+                <Image source = {require('./../../assets/images/download.png')} style={styles.image} />
+                <View style={styles.addressView1}>
+                    <Text style={styles.address}>GJ 3 AP 6855</Text>
                 </View>
                 <View style={styles.inputComponentView}>
                     <InputCompoent
@@ -46,13 +53,11 @@ class RateCardScreen extends Component {
                         secureTextEntry={false}
                         onChangeText=''
                     />
-                    <InputCompoent
-                        placeholder='Vehicle type'
-                        inputRef='vehicle type'
-                        secureTextEntry={true}
-                        value=''
-                        onChangeText=''
-                    />
+                    <Dropdown
+                        label=''
+                        data={data}
+                        fontSize={13}
+                      />
                     <InputCompoent
                         placeholder='lincense no'
                         inputRef='Lincense no'
@@ -67,6 +72,7 @@ class RateCardScreen extends Component {
                         value=''
                         onChangeText=''
                     />
+                    
                 </View>
                 <View style={styles.buttonView}>
                     <TouchableOpacity style={styles.Button}>
@@ -78,7 +84,8 @@ class RateCardScreen extends Component {
     }
 }
 RateCardScreen.navigationOptions = ({ navigation }) => ({
-    title: "Manage My Cars",
+    title: <Text style={{fontSize:18}}>Manage My Cars</Text>,
+    navBarBackgroundColor: '#fff',
 
     headerLeft: (
         <TouchableOpacity
@@ -86,7 +93,7 @@ RateCardScreen.navigationOptions = ({ navigation }) => ({
             activeOpacity={0.5}
             style={styles.bookingPageHeader}
         >
-            <Icon name="bars" size={20} />
+            <Image source={require('./../../assets/images/menu.png')} style={styles.menu}/>
 
         </TouchableOpacity>
     ),

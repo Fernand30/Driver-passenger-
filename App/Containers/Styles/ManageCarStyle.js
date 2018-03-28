@@ -24,6 +24,10 @@ export default StyleSheet.create({
         flex: 1,
         flexDirection: 'row'
     },
+    menu:{
+        width: width / 18,
+        height: width / 18 /766*577
+    },
     partition1: {
         width: '100%',
         height: 110,
@@ -138,14 +142,11 @@ export default StyleSheet.create({
     bottomSubText:{
         paddingTop: 10
     },
-    imageView:{
-        width:width,
-        height:height * 0.2,
-        alignItems:'center'
-    },
     image:{
-        width:width * 0.6,
-        height:height * 0.2
+        width:width * 0.5,
+        height:width * 0.5/981*422,
+        alignSelf: 'center',
+        marginTop: 20
     },
     addressView:{
         width:width,
@@ -153,11 +154,15 @@ export default StyleSheet.create({
         alignItems:'center'
     },
     addressView1:{
-        height: height*0.09,
-        width:width*0.8,
-        backgroundColor:'yellow',
-        borderWidth:3,borderColor:'black',
-        borderRadius:3
+        paddingHorizontal: 35,
+        paddingVertical: 2,
+        backgroundColor:'#f9d900',
+        borderWidth:3,
+        borderColor:'black',
+        borderRadius:3,
+        justifyContent:'center',
+        alignSelf: 'center',
+        marginTop: 20
     },
     address:{
         fontWeight: 'bold',
@@ -179,15 +184,17 @@ export default StyleSheet.create({
         marginTop:15
     },
     Button:{
-        width:width*0.7,
+        width:width*0.8,
         height:height*0.06,
-        backgroundColor:'#0278e0',
-        borderRadius:5
+        backgroundColor:'#2297f4',
+        borderRadius:5,
+        alignItems:'center',
+        justifyContent: 'center'
     },
     buttonContent:{
         color:'white',
         textAlign:'center',
-        paddingTop:7
+        fontSize: 16
     }
 
 })

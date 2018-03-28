@@ -35,6 +35,7 @@ class RegisterScreen extends Component {
             <View style={{flex:0.45}}>
               <InputCompoent
                 labelText='First Name'
+                icon=''
                 placeholder='Enter First Name'
                 inputRef='firstName'
                 value={this.state.firstName}
@@ -45,6 +46,7 @@ class RegisterScreen extends Component {
             <View style={{flex:0.45}}>
               <InputCompoent
                 labelText='Last Name'
+                icon=''
                 placeholder='Enter last name'
                 inputRef='lastName'
                 secureTextEntry={false}
@@ -56,7 +58,7 @@ class RegisterScreen extends Component {
           <View style={{height:20}}/>
           <InputCompoent
             labelText='Email Address'
-            icon = ""
+            icon ="envelope-o"
             placeholder='Enter Email Address'
             inputRef='email'
             value={this.state.email}
@@ -66,7 +68,7 @@ class RegisterScreen extends Component {
           <View style={{height:20}}/>
           <InputCompoent
             labelText='Password'
-            icon = ""
+            icon ="unlock-alt"
             placeholder='Enter password'
             inputRef='password'
             secureTextEntry={true}
@@ -76,8 +78,28 @@ class RegisterScreen extends Component {
           <View style={{height:20}}/>
           <InputCompoent
             labelText='Confirm Password'
-            icon = ""
+            icon = "question-circle"
             placeholder='Re-enter your password'
+            inputRef='rePassword'
+            secureTextEntry={false}
+            value={this.state.rePassword}
+            onChangeText={(text) => this.setState({ rePassword: text })}
+          />
+          <View style={{height:20}}/>
+          <InputCompoent
+            labelText='Confirm Password'
+            icon = "address-book"
+            placeholder='Enter your profile pic'
+            inputRef='rePassword'
+            secureTextEntry={false}
+            value={this.state.rePassword}
+            onChangeText={(text) => this.setState({ rePassword: text })}
+          />
+          <View style={{height:20}}/>
+          <InputCompoent
+            labelText='Confirm Password'
+            icon = "address-card"
+            placeholder='Enter id proof'
             inputRef='rePassword'
             secureTextEntry={false}
             value={this.state.rePassword}

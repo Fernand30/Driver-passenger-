@@ -11,71 +11,70 @@ export default class DrawerDisplay extends Component{
                 <TouchableOpacity onPress={() => {this.props.navigation.navigate('ProfileStack')}}>
                     <Image style={styles.backgroundImg} blurRadius={10} source={require("./../../assets/images/profile.jpg")}/>
                     <View style={styles.avatarContainer}>
-                        <View style={styles.img}>
-                            <Image style={styles.innerImg} source={require("./../../assets/images/profile.jpg")}/>
-                        </View>
+                        
+                        <Image style={styles.innerImg} source={require("./../../assets/images/profile.jpg")}/>
+                        
                         <View style={styles.SwitchView}>
-                        <Text style={styles.imgText}>Renessa Donovan</Text>
-                        <Switch style={styles.SwitchButton}/>
+                            <Text style={styles.imgText}>Renessa Donovan</Text>
+                            <Switch style={styles.SwitchButton}/>
                         </View>
                     </View>
                 </TouchableOpacity>
 
                 <View style={styles.subContainer}>
-                    <TouchableOpacity onPress={() => {}}>
-                        <View style={[styles.flex1, styles.leftMargin]}>
-                            <Icon name="home" size={20} />
-                        </View>
-                        <View>
-                            <Text style={styles.text}>Book Home </Text>
+                    <TouchableOpacity onPress={() => {this.props.navigation.navigate('mainStack')}}>
+                        <View style={styles.menuView}>
+                            <View style={styles.fixView}>
+                                <Image style={styles.home} source={require("./../../assets/images/home.png")}/>
+                            </View>
+                            <Text style={styles.text}>Home </Text>
                         </View>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.subContainer}>
                     <TouchableOpacity onPress={() => {this.props.navigation.navigate('BookingStack')}}>
-                        <View style={styles.flex1}>
-                            <Icon name="globe" size={20} />
+                        <View style={styles.menuView}>
+                            <View style={styles.fixView}>
+                                <Image style={styles.home} source={require("./../../assets/images/request.png")}/>
+                            </View>
+                            <Text style={styles.text}>All Request </Text>
                         </View>
-                        <View>
-                            <Text style={styles.text}>All Request</Text>
-                        </View>
+    
                     </TouchableOpacity>
                 </View>
+
+                <View style={styles.subContainer}>
+                    <TouchableOpacity onPress={() => {}}>
+                        <View style={styles.menuView}>
+                            <View style={styles.fixView}>
+                                <Image style={styles.home} source={require("./../../assets/images/password.png")}/>
+                            </View>
+                            <Text style={styles.text}>Change Password</Text>
+                        </View>
+                        
+                    </TouchableOpacity>
+                </View>
+
 
                 <View style={styles.subContainer}>
                     <TouchableOpacity onPress={() => {this.props.navigation.navigate('RateCardStack')}}>
-                        <View>
-                            <View style={styles.flex1}>
-                                <Icon name="key" size={15} />
+                        <View style={styles.menuView}>
+                            <View style={styles.fixView}>
+                                <Image style={styles.car} source={require("./../../assets/images/car.png")}/>
                             </View>
-                            <View>
-                                <Text style={styles.text}>Change Password</Text>
-                            </View>
+                            <Text style={styles.text}>Manage Car</Text>
                         </View>
+                        
                     </TouchableOpacity>
                 </View>
 
 
                 <View style={styles.subContainer}>
-                    <TouchableOpacity>
-                        <View>
-                            <View style={styles.flex1}>
-                                <Icon name="car" size={20} />
+                    <TouchableOpacity onPress={() => {this.props.navigation.navigate('WalletStack')}}>
+                        <View style={styles.menuView}>
+                            <View style={styles.fixView}>
+                                <Image style={styles.wallet} source={require("./../../assets/images/wallet.png")}/>
                             </View>
-                            <View>
-                                <Text style={styles.text}>Manage Car</Text>
-                            </View>
-                        </View>
-                    </TouchableOpacity>
-                </View>
-
-
-                <View style={styles.subContainer}>
-                    <TouchableOpacity>
-                        <View style={[styles.flex1, styles.leftMargin]}>
-                            <Icon name="google-wallet" size={20} />
-                        </View>
-                        <View>
                             <Text style={styles.text}>Wallet</Text>
                         </View>
                     </TouchableOpacity>
@@ -87,7 +86,8 @@ export default class DrawerDisplay extends Component{
     renderFooter(){
         return (
             <View style={[styles.footer]}>
-                <TouchableOpacity>
+                <TouchableOpacity style={{flexDirection:'row', alignItems:'center'}}>
+                    <Image style={styles.home} source={require("./../../assets/images/logout.png")}/>
                     <Text style={styles.text}>Log Out</Text>
                 </TouchableOpacity>
             </View>
