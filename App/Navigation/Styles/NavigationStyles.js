@@ -25,6 +25,7 @@ export default StyleSheet.create({
     imgText : {
         fontSize:16,
         color:'#fff',
+        backgroundColor: 'transparent'
     },
     innerImg : {
         borderRadius: width * 0.1,
